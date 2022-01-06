@@ -5,7 +5,23 @@ import javax.swing.*;
 import javax.swing.Timer;
 
 public class FlappyCat implements ActionListener, MouseListener, KeyListener{
+    public static FlappyCat flappyCat;
 
+    public boolean gameOver, started, begining = true;
+
+    Timer timer = new Timer(20, this);
+
+    public FlappyCat(){
+        gameSettings();
+        initialize();
+        timer.start();
+    }
+
+    public void initialize() {
+    }
+
+    public void gameSettings() {
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
