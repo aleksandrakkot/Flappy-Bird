@@ -24,7 +24,7 @@ public class Visuals {
         small_button = new ImageIcon(".\\src\\img\\small_button.png").getImage();
         back = new ImageIcon(".\\src\\img\\back.png").getImage();
         cat = new ImageIcon(".\\src\\img\\cat.png").getImage();
-        pipe = new ImageIcon(".\\src\\img\\cat.png").getImage();
+        pipe = new ImageIcon(".\\src\\img\\pipe.png").getImage();
     }
 
     public void homeScreen(Graphics g) {
@@ -33,21 +33,20 @@ public class Visuals {
         g.setColor(Color.GRAY);
         g.setFont(font);
 
-        g.drawString("Flappy Cat!", 100, Constants.SIZE / 2 - 150);
+        g.drawString("Flappy Cat!", 260, Constants.SIZE / 2 - 150);
 
         g.setColor(Color.WHITE);
 
 
         g.drawImage(button, 150, 400, 500, 60, null);
-        g.drawString("Start Game", 300, 444);
+        g.drawString("Start Game", 265, 444);
 
-        g.drawImage(small_button, 410, 500, 240, 60, null);
-        g.drawString("Quit", 500, 544);
+        g.drawImage(small_button, 290, 500, 240, 60, null);
+        g.drawString("Quit", 350, 544);
     }
 
     public void drawGame(Graphics g, Rectangle player) {
-        g.drawImage(back, 0, 0, Constants.SIZE, Constants.MAPMAXHEIGHT, null);
-        //g.drawImage(gameGround, 0, Constants.MAPMAXHEIGHT, Constants.SIZE, Constants.SIZE - Constants.MAPMAXHEIGHT, null);
+        g.drawImage(back, 0, 0, Constants.SIZE, Constants.MAPHEIGHT, null);
         g.drawImage(cat, player.x, player.y, player.width, player.height, null);
     }
 
@@ -58,22 +57,24 @@ public class Visuals {
 
     public void startBanner(Graphics g) {
         g.setFont(font);
-        g.drawString("Click to start!", 75, Constants.SIZE / 2 - 50);
+        g.setColor(Color.black);
+        g.drawString("Click to start!", 220, Constants.SIZE / 2 - 50);
     }
 
     public void gameOverScreen(Graphics g, int finalScore) {
         int tooLong;
         g.setFont(font);
-        g.drawString("Game Over!", 300, Constants.SIZE / 2 - 150);
+        g.setColor(Color.black);
+        g.drawString("Game Over!", 270, Constants.SIZE / 2 - 150);
         if(finalScore <= 10) tooLong = 0;  else tooLong = 5;
-        g.drawString("Your score: " + finalScore, 270 - tooLong, Constants.SIZE / 2 - 50);
-        g.drawString("Click to play again",240,Constants.SIZE / 2 + 50);
+        g.drawString("Your score: " + finalScore, 240 - tooLong, Constants.SIZE / 2 - 50);
+        g.drawString("Click to play again",190,Constants.SIZE / 2 + 50);
         g.drawImage(cat,0, 0, 75, 65, null);
     }
 
     public void scoreBar(Graphics g, int score) {
         g.setFont(font);
-        g.setColor(Color.red);
+        g.setColor(Color.gray);
         g.drawString("Score: " + score, 25, 730);
     }
 }

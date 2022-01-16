@@ -1,7 +1,6 @@
 public class Dimensions {
     public static int SIZE = 800,
-                      MAPMAXHEIGHT = 675,
-                      MAPMINHEIGHT = 0,
+                      MAPHEIGHT = 675,
                       PLAYERSIZE = 30;
 
 }

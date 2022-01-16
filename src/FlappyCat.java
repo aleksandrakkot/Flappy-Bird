@@ -38,11 +38,11 @@ public class FlappyCat implements ActionListener, MouseListener, KeyListener{
         int height = 50 + rand.nextInt(350);
 
         if (start){
-            pipes.add(new Rectangle(Dimensions.SIZE + width + pipes.size() * 300, Dimensions.MAPMAXHEIGHT - height, width, height));
+            pipes.add(new Rectangle(Dimensions.SIZE + width + pipes.size() * 300, Dimensions.MAPHEIGHT - height, width, height));
             pipes.add(new Rectangle(Dimensions.SIZE + width + (pipes.size() - 1) * 300, 0, width, Dimensions.SIZE - height - space));
         }
         else{
-            pipes.add(new Rectangle(pipes.get(pipes.size() - 1).x + 600, Dimensions.MAPMAXHEIGHT - height, width, height));
+            pipes.add(new Rectangle(pipes.get(pipes.size() - 1).x + 600, Dimensions.MAPHEIGHT - height, width, height));
             pipes.add(new Rectangle(pipes.get(pipes.size() - 1).x, 0, width, Dimensions.SIZE - height - space));
         }
     }
@@ -51,7 +51,7 @@ public class FlappyCat implements ActionListener, MouseListener, KeyListener{
         renderer = new Renderer();
         rand = new Random();
         jframe.add(renderer);
-        jframe.setTitle("Flappy Creep");
+        jframe.setTitle("Flappy Cat");
         jframe.setIconImage(visual.cat);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setSize(Dimensions.SIZE, Dimensions.SIZE);
@@ -108,11 +108,11 @@ public class FlappyCat implements ActionListener, MouseListener, KeyListener{
                         player.y = pipe.height;
                     }
                 }
-                else if (player.y > Dimensions.MAPMAXHEIGHT || player.y < 0){
+                else if (player.y > Dimensions.MAPHEIGHT || player.y < 0){
                     gameOver = true;
                 }
-                else if (player.y + yMove >= Dimensions.MAPMAXHEIGHT){
-                    player.y = Dimensions.MAPMAXHEIGHT - player.height;
+                else if (player.y + yMove >= Dimensions.MAPHEIGHT){
+                    player.y = Dimensions.MAPHEIGHT - player.height;
                     gameOver = true;
                 }
                 finalScore = score;
