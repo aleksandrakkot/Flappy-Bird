@@ -12,3 +12,14 @@ Flappy Cat to klon popularnej gry Flappy Bird, w którym zamiast ptaka gracz ste
 ## Wymagania
 
 - **JDK**: Java SE 8 lub nowsza.
+
+
+## Ekran startowy
+![image](https://github.com/user-attachments/assets/51331e2c-6ff5-4d8d-a4f5-781a0732ebad)
+
+## Ekran rozpoczecia gry
+![image](https://github.com/user-attachments/assets/53e06d5d-9a5a-40bd-99b9-7019601dbc20)
+
+## Ekran końcowy
+![image](https://github.com/user-attachments/assets/fcad3026-e6ac-4c87-91b3-f70e62c92853)
+
